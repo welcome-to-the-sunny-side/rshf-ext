@@ -1,1 +1,197 @@
-(()=>{"use strict";var e,t={748:(e,t,n)=>{var o,r,l,_,i,u,s,a,c,p,f,d={},h=[],g=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,m=Array.isArray;function y(e,t){for(var n in t)e[n]=t[n];return e}function v(e){e&&e.parentNode&&e.parentNode.removeChild(e)}function b(e,t,n,o,_){var i={type:e,props:t,key:n,ref:o,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:null==_?++l:_,__i:-1,__u:0};return null==_&&null!=r.vnode&&r.vnode(i),i}function k(e){return e.children}function E(e,t){this.props=e,this.context=t}function x(e,t){if(null==t)return e.__?x(e.__,e.__i+1):null;for(var n;t<e.__k.length;t++)if(null!=(n=e.__k[t])&&null!=n.__e)return n.__e;return"function"==typeof e.type?x(e):null}function w(e){var t,n;if(null!=(e=e.__)&&null!=e.__c){for(e.__e=e.__c.base=null,t=0;t<e.__k.length;t++)if(null!=(n=e.__k[t])&&null!=n.__e){e.__e=e.__c.base=n.__e;break}return w(e)}}function S(e){(!e.__d&&(e.__d=!0)&&_.push(e)&&!P.__r++||i!=r.debounceRendering)&&((i=r.debounceRendering)||u)(P)}function P(){for(var e,t,n,o,l,i,u,a=1;_.length;)_.length>a&&_.sort(s),e=_.shift(),a=_.length,e.__d&&(n=void 0,l=(o=(t=e).__v).__e,i=[],u=[],t.__P&&((n=y({},o)).__v=o.__v+1,r.vnode&&r.vnode(n),D(t.__P,n,o,t.__n,t.__P.namespaceURI,32&o.__u?[l]:null,i,null==l?x(o):l,!!(32&o.__u),u),n.__v=o.__v,n.__.__k[n.__i]=n,F(i,n,u),n.__e!=l&&w(n)));P.__r=0}function T(e,t,n,o,r,l,_,i,u,s,a){var c,p,f,g,m,y,v=o&&o.__k||h,b=t.length;for(u=C(n,t,v,u,b),c=0;c<b;c++)null!=(f=n.__k[c])&&(p=-1==f.__i?d:v[f.__i]||d,f.__i=c,y=D(e,f,p,r,l,_,i,u,s,a),g=f.__e,f.ref&&p.ref!=f.ref&&(p.ref&&N(p.ref,null,f),a.push(f.ref,f.__c||g,f)),null==m&&null!=g&&(m=g),4&f.__u||p.__k===f.__k?u=I(f,u,e):"function"==typeof f.type&&void 0!==y?u=y:g&&(u=g.nextSibling),f.__u&=-7);return n.__e=m,u}function C(e,t,n,o,r){var l,_,i,u,s,a=n.length,c=a,p=0;for(e.__k=new Array(r),l=0;l<r;l++)null!=(_=t[l])&&"boolean"!=typeof _&&"function"!=typeof _?(u=l+p,(_=e.__k[l]="string"==typeof _||"number"==typeof _||"bigint"==typeof _||_.constructor==String?b(null,_,null,null,null):m(_)?b(k,{children:_},null,null,null):null==_.constructor&&_.__b>0?b(_.type,_.props,_.key,_.ref?_.ref:null,_.__v):_).__=e,_.__b=e.__b+1,i=null,-1!=(s=_.__i=R(_,n,u,c))&&(c--,(i=n[s])&&(i.__u|=2)),null==i||null==i.__v?(-1==s&&(r>a?p--:r<a&&p++),"function"!=typeof _.type&&(_.__u|=4)):s!=u&&(s==u-1?p--:s==u+1?p++:(s>u?p--:p++,_.__u|=4))):e.__k[l]=null;if(c)for(l=0;l<a;l++)null!=(i=n[l])&&!(2&i.__u)&&(i.__e==o&&(o=x(i)),U(i,i));return o}function I(e,t,n){var o,r;if("function"==typeof e.type){for(o=e.__k,r=0;o&&r<o.length;r++)o[r]&&(o[r].__=e,t=I(o[r],t,n));return t}e.__e!=t&&(t&&e.type&&!n.contains(t)&&(t=x(e)),n.insertBefore(e.__e,t||null),t=e.__e);do{t=t&&t.nextSibling}while(null!=t&&8==t.nodeType);return t}function R(e,t,n,o){var r,l,_=e.key,i=e.type,u=t[n];if(null===u&&null==e.key||u&&_==u.key&&i==u.type&&!(2&u.__u))return n;if(o>(null==u||2&u.__u?0:1))for(r=n-1,l=n+1;r>=0||l<t.length;){if(r>=0){if((u=t[r])&&!(2&u.__u)&&_==u.key&&i==u.type)return r;r--}if(l<t.length){if((u=t[l])&&!(2&u.__u)&&_==u.key&&i==u.type)return l;l++}}return-1}function M(e,t,n){"-"==t[0]?e.setProperty(t,null==n?"":n):e[t]=null==n?"":"number"!=typeof n||g.test(t)?n:n+"px"}function B(e,t,n,o,r){var l;e:if("style"==t)if("string"==typeof n)e.style.cssText=n;else{if("string"==typeof o&&(e.style.cssText=o=""),o)for(t in o)n&&t in n||M(e.style,t,"");if(n)for(t in n)o&&n[t]==o[t]||M(e.style,t,n[t])}else if("o"==t[0]&&"n"==t[1])l=t!=(t=t.replace(a,"$1")),t=t.toLowerCase()in e||"onFocusOut"==t||"onFocusIn"==t?t.toLowerCase().slice(2):t.slice(2),e.l||(e.l={}),e.l[t+l]=n,n?o?n.u=o.u:(n.u=c,e.addEventListener(t,l?f:p,l)):e.removeEventListener(t,l?f:p,l);else{if("http://www.w3.org/2000/svg"==r)t=t.replace(/xlink(H|:h)/,"h").replace(/sName$/,"s");else if("width"!=t&&"height"!=t&&"href"!=t&&"list"!=t&&"form"!=t&&"tabIndex"!=t&&"download"!=t&&"rowSpan"!=t&&"colSpan"!=t&&"role"!=t&&"popover"!=t&&t in e)try{e[t]=null==n?"":n;break e}catch(e){}"function"==typeof n||(null==n||!1===n&&"-"!=t[4]?e.removeAttribute(t):e.setAttribute(t,"popover"==t&&1==n?"":n))}}function A(e){return function(t){if(this.l){var n=this.l[t.type+e];if(null==t.t)t.t=c++;else if(t.t<n.u)return;return n(r.event?r.event(t):t)}}}function D(e,t,n,o,l,_,i,u,s,a){var c,p,f,d,h,g,b,x,w,S,P,C,I,R,M,B,A,D=t.type;if(null!=t.constructor)return null;128&n.__u&&(s=!!(32&n.__u),_=[u=t.__e=n.__e]),(c=r.__b)&&c(t);e:if("function"==typeof D)try{if(x=t.props,w="prototype"in D&&D.prototype.render,S=(c=D.contextType)&&o[c.__c],P=c?S?S.props.value:c.__:o,n.__c?b=(p=t.__c=n.__c).__=p.__E:(w?t.__c=p=new D(x,P):(t.__c=p=new E(x,P),p.constructor=D,p.render=H),S&&S.sub(p),p.props=x,p.state||(p.state={}),p.context=P,p.__n=o,f=p.__d=!0,p.__h=[],p._sb=[]),w&&null==p.__s&&(p.__s=p.state),w&&null!=D.getDerivedStateFromProps&&(p.__s==p.state&&(p.__s=y({},p.__s)),y(p.__s,D.getDerivedStateFromProps(x,p.__s))),d=p.props,h=p.state,p.__v=t,f)w&&null==D.getDerivedStateFromProps&&null!=p.componentWillMount&&p.componentWillMount(),w&&null!=p.componentDidMount&&p.__h.push(p.componentDidMount);else{if(w&&null==D.getDerivedStateFromProps&&x!==d&&null!=p.componentWillReceiveProps&&p.componentWillReceiveProps(x,P),!p.__e&&null!=p.shouldComponentUpdate&&!1===p.shouldComponentUpdate(x,p.__s,P)||t.__v==n.__v){for(t.__v!=n.__v&&(p.props=x,p.state=p.__s,p.__d=!1),t.__e=n.__e,t.__k=n.__k,t.__k.some((function(e){e&&(e.__=t)})),C=0;C<p._sb.length;C++)p.__h.push(p._sb[C]);p._sb=[],p.__h.length&&i.push(p);break e}null!=p.componentWillUpdate&&p.componentWillUpdate(x,p.__s,P),w&&null!=p.componentDidUpdate&&p.__h.push((function(){p.componentDidUpdate(d,h,g)}))}if(p.context=P,p.props=x,p.__P=e,p.__e=!1,I=r.__r,R=0,w){for(p.state=p.__s,p.__d=!1,I&&I(t),c=p.render(p.props,p.state,p.context),M=0;M<p._sb.length;M++)p.__h.push(p._sb[M]);p._sb=[]}else do{p.__d=!1,I&&I(t),c=p.render(p.props,p.state,p.context),p.state=p.__s}while(p.__d&&++R<25);p.state=p.__s,null!=p.getChildContext&&(o=y(y({},o),p.getChildContext())),w&&!f&&null!=p.getSnapshotBeforeUpdate&&(g=p.getSnapshotBeforeUpdate(d,h)),B=c,null!=c&&c.type===k&&null==c.key&&(B=L(c.props.children)),u=T(e,m(B)?B:[B],t,n,o,l,_,i,u,s,a),p.base=t.__e,t.__u&=-161,p.__h.length&&i.push(p),b&&(p.__E=p.__=null)}catch(e){if(t.__v=null,s||null!=_)if(e.then){for(t.__u|=s?160:128;u&&8==u.nodeType&&u.nextSibling;)u=u.nextSibling;_[_.indexOf(u)]=null,t.__e=u}else for(A=_.length;A--;)v(_[A]);else t.__e=n.__e,t.__k=n.__k;r.__e(e,t,n)}else null==_&&t.__v==n.__v?(t.__k=n.__k,t.__e=n.__e):u=t.__e=O(n.__e,t,n,o,l,_,i,s,a);return(c=r.diffed)&&c(t),128&t.__u?void 0:u}function F(e,t,n){for(var o=0;o<n.length;o++)N(n[o],n[++o],n[++o]);r.__c&&r.__c(t,e),e.some((function(t){try{e=t.__h,t.__h=[],e.some((function(e){e.call(t)}))}catch(e){r.__e(e,t.__v)}}))}function L(e){return"object"!=typeof e||null==e||e.__b&&e.__b>0?e:m(e)?e.map(L):y({},e)}function O(e,t,n,l,_,i,u,s,a){var c,p,f,h,g,y,b,k=n.props,E=t.props,w=t.type;if("svg"==w?_="http://www.w3.org/2000/svg":"math"==w?_="http://www.w3.org/1998/Math/MathML":_||(_="http://www.w3.org/1999/xhtml"),null!=i)for(c=0;c<i.length;c++)if((g=i[c])&&"setAttribute"in g==!!w&&(w?g.localName==w:3==g.nodeType)){e=g,i[c]=null;break}if(null==e){if(null==w)return document.createTextNode(E);e=document.createElementNS(_,w,E.is&&E),s&&(r.__m&&r.__m(t,i),s=!1),i=null}if(null==w)k===E||s&&e.data==E||(e.data=E);else{if(i=i&&o.call(e.childNodes),k=n.props||d,!s&&null!=i)for(k={},c=0;c<e.attributes.length;c++)k[(g=e.attributes[c]).name]=g.value;for(c in k)if(g=k[c],"children"==c);else if("dangerouslySetInnerHTML"==c)f=g;else if(!(c in E)){if("value"==c&&"defaultValue"in E||"checked"==c&&"defaultChecked"in E)continue;B(e,c,null,g,_)}for(c in E)g=E[c],"children"==c?h=g:"dangerouslySetInnerHTML"==c?p=g:"value"==c?y=g:"checked"==c?b=g:s&&"function"!=typeof g||k[c]===g||B(e,c,g,k[c],_);if(p)s||f&&(p.__html==f.__html||p.__html==e.innerHTML)||(e.innerHTML=p.__html),t.__k=[];else if(f&&(e.innerHTML=""),T("template"==t.type?e.content:e,m(h)?h:[h],t,n,l,"foreignObject"==w?"http://www.w3.org/1999/xhtml":_,i,u,i?i[0]:n.__k&&x(n,0),s,a),null!=i)for(c=i.length;c--;)v(i[c]);s||(c="value","progress"==w&&null==y?e.removeAttribute("value"):null!=y&&(y!==e[c]||"progress"==w&&!y||"option"==w&&y!=k[c])&&B(e,c,y,k[c],_),c="checked",null!=b&&b!=e[c]&&B(e,c,b,k[c],_))}return e}function N(e,t,n){try{if("function"==typeof e){var o="function"==typeof e.__u;o&&e.__u(),o&&null==t||(e.__u=e(t))}else e.current=t}catch(e){r.__e(e,n)}}function U(e,t,n){var o,l;if(r.unmount&&r.unmount(e),(o=e.ref)&&(o.current&&o.current!=e.__e||N(o,null,t)),null!=(o=e.__c)){if(o.componentWillUnmount)try{o.componentWillUnmount()}catch(e){r.__e(e,t)}o.base=o.__P=null}if(o=e.__k)for(l=0;l<o.length;l++)o[l]&&U(o[l],t,n||"function"!=typeof e.type);n||v(e.__e),e.__c=e.__=e.__e=void 0}function H(e,t,n){return this.constructor(e,n)}o=h.slice,r={__e:function(e,t,n,o){for(var r,l,_;t=t.__;)if((r=t.__c)&&!r.__)try{if((l=r.constructor)&&null!=l.getDerivedStateFromError&&(r.setState(l.getDerivedStateFromError(e)),_=r.__d),null!=r.componentDidCatch&&(r.componentDidCatch(e,o||{}),_=r.__d),_)return r.__E=r}catch(t){e=t}throw e}},l=0,E.prototype.setState=function(e,t){var n;n=null!=this.__s&&this.__s!=this.state?this.__s:this.__s=y({},this.state),"function"==typeof e&&(e=e(y({},n),this.props)),e&&y(n,e),null!=e&&this.__v&&(t&&this._sb.push(t),S(this))},E.prototype.forceUpdate=function(e){this.__v&&(this.__e=!0,e&&this.__h.push(e),S(this))},E.prototype.render=k,_=[],u="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,s=function(e,t){return e.__v.__b-t.__v.__b},P.__r=0,a=/(PointerCapture)$|Capture$/i,c=0,p=A(!1),f=A(!0);var G=0;function W(e,t,n,o,l,_){t||(t={});var i,u,s=t;if("ref"in s)for(u in s={},t)"ref"==u?i=t[u]:s[u]=t[u];var a={type:e,props:s,key:n,ref:i,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:--G,__i:-1,__u:0,__source:l,__self:_};if("function"==typeof e&&(i=e.defaultProps))for(u in i)void 0===s[u]&&(s[u]=i[u]);return r.vnode&&r.vnode(a),a}Array.isArray;const j={group:"",showAlternativeRating:!0,noGroupRatingStyle:"opacity",maxReplacementsPerPage:2e3,cacheThresholdMinutes:30};var $=n(815),X=n.n($);function z(e){const t=document.getElementById("no-rating-example");if(t)switch(t.removeAttribute("style"),t.textContent?.endsWith("*")&&(t.textContent="NoRating"),e){case"opacity":t.style.color="#0000ff",t.style.opacity="0.5";break;case"strikethrough":t.style.color="#0000ff",t.style.textDecoration="line-through";break;case"brown":t.style.color="#964B00";break;case"asterisk":t.style.color="#0000ff",t.textContent="NoRating*"}}function V(e,t=!1){const n=document.getElementById("status");n&&(n.textContent=e,n.className=t?"error":"success",n.style.display="block",setTimeout((()=>{n.style.display="none"}),3e3))}document.addEventListener("DOMContentLoaded",(async()=>{console.log("[RSHF-EXT] Options page loaded, initializing...");try{let e=0;const t=3;let n;for(;e<t;)try{console.log("[RSHF-EXT] Attempting to load settings, attempt:",e+1),n=await X().runtime.sendMessage({type:"GET_SETTINGS"}),console.log("[RSHF-EXT] Settings loaded successfully:",n);break}catch(n){if(console.warn(`[RSHF-EXT] Failed to load settings, attempt ${e+1}:`,n),e++,e>=t)throw n;await new Promise((e=>setTimeout(e,500)))}const o=document.getElementById("group-name");o&&(o.value=n.group);const r=document.getElementById("toggle-ratings");r&&(r.checked=n.showAlternativeRating);const l=document.getElementById("no-rating-style");l&&(l.value=n.noGroupRatingStyle);const _=document.getElementById("max-replacements");_&&(_.value=n.maxReplacementsPerPage.toString());const i=document.getElementById("cache-threshold");i&&(i.value=n.cacheThresholdMinutes.toString()),Object.entries({"newbie-example":"#808080","pupil-example":"#008000","specialist-example":"#03A89E","expert-example":"#0000ff","cm-example":"#a0a","master-example":"#FF8C00","im-example":"#FF8C00","gm-example":"#ff0000","igm-example":"#ff0000","lgm-example":"#ff0000","no-rating-example":"#964B00"}).forEach((([e,t])=>{const n=document.getElementById(e);n&&(n.style.color=t)})),z(n.noGroupRatingStyle),function(){const e=document.getElementById("group-name"),t=document.getElementById("toggle-ratings"),n=document.getElementById("no-rating-style");n?.addEventListener("change",(e=>{z(e.target.value)}));const o=document.getElementById("max-replacements"),r=document.getElementById("cache-threshold"),l=document.getElementById("save-settings");l?.addEventListener("click",(async()=>{try{const l={group:e?.value||"",showAlternativeRating:t?.checked||!0,noGroupRatingStyle:n?.value||"opacity",maxReplacementsPerPage:parseInt(o?.value||"2000",10),cacheThresholdMinutes:parseInt(r?.value||"30",10)};await X().runtime.sendMessage({type:"SAVE_SETTINGS",settings:l}),(await X().tabs.query({url:"*://*.codeforces.com/*"})).forEach((e=>{e.id&&X().tabs.sendMessage(e.id,{type:"SETTINGS_UPDATED"})})),V("Settings saved successfully!")}catch(e){console.error("Error saving settings:",e),V("Error saving settings",!0)}}));const _=document.getElementById("clear-cache");_?.addEventListener("click",(async()=>{try{await X().runtime.sendMessage({type:"CLEAR_CACHE"}),V("Cache cleared successfully!")}catch(e){console.error("Error clearing cache:",e),V("Error clearing cache",!0)}}));const i=document.getElementById("restore-defaults");i?.addEventListener("click",(async()=>{try{e&&(e.value=j.group),t&&(t.checked=j.showAlternativeRating),n&&(n.value=j.noGroupRatingStyle),o&&(o.value=j.maxReplacementsPerPage.toString()),r&&(r.value=j.cacheThresholdMinutes.toString()),z(j.noGroupRatingStyle),V("Default settings restored. Click Save to apply.")}catch(e){console.error("Error restoring defaults:",e),V("Error restoring defaults",!0)}}))}()}catch(e){console.error("Error initializing options page:",e),V("Error loading settings",!0)}})),function(e,t,n){var l,_,i,u;t==document&&(t=document.documentElement),r.__&&r.__(e,t),_=(l="function"==typeof n)?null:n&&n.__k||t.__k,i=[],u=[],D(t,e=(!l&&n||t).__k=function(e,t,n){var r,l,_,i={};for(_ in t)"key"==_?r=t[_]:"ref"==_?l=t[_]:i[_]=t[_];if(arguments.length>2&&(i.children=arguments.length>3?o.call(arguments,2):n),"function"==typeof e&&null!=e.defaultProps)for(_ in e.defaultProps)null==i[_]&&(i[_]=e.defaultProps[_]);return b(e,i,r,l,null)}(k,null,[e]),_||d,d,t.namespaceURI,!l&&n?[n]:_?null:t.firstChild?o.call(t.childNodes):null,i,!l&&n?n:_?_.__e:t.firstChild,l,u),F(i,e,u)}(W((()=>W("div",{})),{}),document.body)}},n={};function o(e){var r=n[e];if(void 0!==r)return r.exports;var l=n[e]={exports:{}};return t[e].call(l.exports,l,l.exports,o),l.exports}o.m=t,e=[],o.O=(t,n,r,l)=>{if(!n){var _=1/0;for(a=0;a<e.length;a++){for(var[n,r,l]=e[a],i=!0,u=0;u<n.length;u++)(!1&l||_>=l)&&Object.keys(o.O).every((e=>o.O[e](n[u])))?n.splice(u--,1):(i=!1,l<_&&(_=l));if(i){e.splice(a--,1);var s=r();void 0!==s&&(t=s)}}return t}l=l||0;for(var a=e.length;a>0&&e[a-1][2]>l;a--)e[a]=e[a-1];e[a]=[n,r,l]},o.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return o.d(t,{a:t}),t},o.d=(e,t)=>{for(var n in t)o.o(t,n)&&!o.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},o.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{var e={575:0};o.O.j=t=>0===e[t];var t=(t,n)=>{var r,l,[_,i,u]=n,s=0;if(_.some((t=>0!==e[t]))){for(r in i)o.o(i,r)&&(o.m[r]=i[r]);if(u)var a=u(o)}for(t&&t(n);s<_.length;s++)l=_[s],o.o(e,l)&&e[l]&&e[l][0](),e[l]=0;return o.O(a)},n=self.webpackChunkrshf_ext=self.webpackChunkrshf_ext||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})();var r=o.O(void 0,[815],(()=>o(748)));r=o.O(r)})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/options/options.tsx":
+/*!*********************************!*\
+  !*** ./src/options/options.tsx ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var preact_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! preact/jsx-runtime */ \"./node_modules/preact/jsx-runtime/dist/jsxRuntime.module.js\");\n/* harmony import */ var preact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! preact */ \"./node_modules/preact/dist/preact.module.js\");\n/* harmony import */ var _shared_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/constants */ \"./src/shared/constants.ts\");\n/* harmony import */ var webextension_polyfill__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! webextension-polyfill */ \"./node_modules/webextension-polyfill/dist/browser-polyfill.js\");\n/* harmony import */ var webextension_polyfill__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(webextension_polyfill__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n/**\n * Options page component\n */\nconst OptionsPage = () => {\n    return ((0,preact_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {}));\n};\n/**\n * Initialize preview examples with their respective colors\n */\nfunction initializeColorExamples() {\n    const exampleStyles = {\n        'newbie-example': '#808080',\n        'pupil-example': '#008000',\n        'specialist-example': '#03A89E',\n        'expert-example': '#0000ff',\n        'cm-example': '#a0a',\n        'master-example': '#FF8C00',\n        'im-example': '#FF8C00',\n        'gm-example': '#ff0000',\n        'igm-example': '#ff0000',\n        'lgm-example': '#ff0000',\n        'no-rating-example': '#964B00'\n    };\n    Object.entries(exampleStyles).forEach(([id, color]) => {\n        const element = document.getElementById(id);\n        if (element) {\n            element.style.color = color;\n        }\n    });\n}\n/**\n * Update the examples based on the selected no-rating style\n */\nfunction updateNoRatingExamples(style) {\n    const noRatingExample = document.getElementById('no-rating-example');\n    if (!noRatingExample)\n        return;\n    // Reset styles\n    noRatingExample.removeAttribute('style');\n    if (noRatingExample.textContent?.endsWith('*')) {\n        noRatingExample.textContent = 'NoRating';\n    }\n    // Apply selected style\n    switch (style) {\n        case 'opacity':\n            noRatingExample.style.color = '#0000ff'; // Example color (Expert)\n            noRatingExample.style.opacity = '0.5';\n            break;\n        case 'strikethrough':\n            noRatingExample.style.color = '#0000ff'; // Example color (Expert)\n            noRatingExample.style.textDecoration = 'line-through';\n            break;\n        case 'brown':\n            noRatingExample.style.color = '#964B00'; // Brown\n            break;\n        case 'asterisk':\n            noRatingExample.style.color = '#0000ff'; // Example color (Expert)\n            noRatingExample.textContent = 'NoRating*';\n            break;\n    }\n}\n/**\n * Show status message\n */\nfunction showStatus(message, isError = false) {\n    const status = document.getElementById('status');\n    if (!status)\n        return;\n    status.textContent = message;\n    status.className = isError ? 'error' : 'success';\n    status.style.display = 'block';\n    setTimeout(() => {\n        status.style.display = 'none';\n    }, 3000);\n}\n/**\n * Initialize event listeners for the options page\n */\nfunction initializeEventListeners() {\n    // Group name input\n    const groupNameInput = document.getElementById('group-name');\n    // Toggle ratings checkbox\n    const toggleRatings = document.getElementById('toggle-ratings');\n    // No rating style select\n    const noRatingStyle = document.getElementById('no-rating-style');\n    noRatingStyle?.addEventListener('change', (e) => {\n        updateNoRatingExamples(e.target.value);\n    });\n    // Max replacements input\n    const maxReplacements = document.getElementById('max-replacements');\n    // Cache threshold input\n    const cacheThreshold = document.getElementById('cache-threshold');\n    // Save settings button\n    const saveButton = document.getElementById('save-settings');\n    saveButton?.addEventListener('click', async () => {\n        try {\n            const settings = {\n                group: groupNameInput?.value || '',\n                showAlternativeRating: toggleRatings?.checked || true,\n                noGroupRatingStyle: (noRatingStyle?.value || 'opacity'),\n                maxReplacementsPerPage: parseInt(maxReplacements?.value || '2000', 10),\n                cacheThresholdMinutes: parseInt(cacheThreshold?.value || '30', 10)\n            };\n            await webextension_polyfill__WEBPACK_IMPORTED_MODULE_3___default().runtime.sendMessage({\n                type: 'SAVE_SETTINGS',\n                settings\n            });\n            // Notify content scripts\n            const tabs = await webextension_polyfill__WEBPACK_IMPORTED_MODULE_3___default().tabs.query({ url: '*://*.codeforces.com/*' });\n            tabs.forEach(tab => {\n                if (tab.id) {\n                    webextension_polyfill__WEBPACK_IMPORTED_MODULE_3___default().tabs.sendMessage(tab.id, { type: 'SETTINGS_UPDATED' });\n                }\n            });\n            showStatus('Settings saved successfully!');\n        }\n        catch (error) {\n            console.error('Error saving settings:', error);\n            showStatus('Error saving settings', true);\n        }\n    });\n    // Clear cache button\n    const clearCacheButton = document.getElementById('clear-cache');\n    clearCacheButton?.addEventListener('click', async () => {\n        try {\n            await webextension_polyfill__WEBPACK_IMPORTED_MODULE_3___default().runtime.sendMessage({ type: 'CLEAR_CACHE' });\n            showStatus('Cache cleared successfully!');\n        }\n        catch (error) {\n            console.error('Error clearing cache:', error);\n            showStatus('Error clearing cache', true);\n        }\n    });\n    // Restore defaults button\n    const restoreDefaultsButton = document.getElementById('restore-defaults');\n    restoreDefaultsButton?.addEventListener('click', async () => {\n        try {\n            // Reset form fields to defaults\n            if (groupNameInput)\n                groupNameInput.value = _shared_constants__WEBPACK_IMPORTED_MODULE_2__.DEFAULT_SETTINGS.group;\n            if (toggleRatings)\n                toggleRatings.checked = _shared_constants__WEBPACK_IMPORTED_MODULE_2__.DEFAULT_SETTINGS.showAlternativeRating;\n            if (noRatingStyle)\n                noRatingStyle.value = _shared_constants__WEBPACK_IMPORTED_MODULE_2__.DEFAULT_SETTINGS.noGroupRatingStyle;\n            if (maxReplacements)\n                maxReplacements.value = _shared_constants__WEBPACK_IMPORTED_MODULE_2__.DEFAULT_SETTINGS.maxReplacementsPerPage.toString();\n            if (cacheThreshold)\n                cacheThreshold.value = _shared_constants__WEBPACK_IMPORTED_MODULE_2__.DEFAULT_SETTINGS.cacheThresholdMinutes.toString();\n            // Update example\n            updateNoRatingExamples(_shared_constants__WEBPACK_IMPORTED_MODULE_2__.DEFAULT_SETTINGS.noGroupRatingStyle);\n            // Don't automatically save to avoid confusion\n            showStatus('Default settings restored. Click Save to apply.');\n        }\n        catch (error) {\n            console.error('Error restoring defaults:', error);\n            showStatus('Error restoring defaults', true);\n        }\n    });\n}\n// Initialize the options page\ndocument.addEventListener('DOMContentLoaded', async () => {\n    console.log('[RSHF-EXT] Options page loaded, initializing...');\n    try {\n        // Check if background script is available\n        let retries = 0;\n        const maxRetries = 3;\n        let settings;\n        while (retries < maxRetries) {\n            try {\n                // Load settings\n                console.log('[RSHF-EXT] Attempting to load settings, attempt:', retries + 1);\n                settings = await webextension_polyfill__WEBPACK_IMPORTED_MODULE_3___default().runtime.sendMessage({ type: 'GET_SETTINGS' });\n                console.log('[RSHF-EXT] Settings loaded successfully:', settings);\n                break;\n            }\n            catch (err) {\n                console.warn(`[RSHF-EXT] Failed to load settings, attempt ${retries + 1}:`, err);\n                retries++;\n                if (retries >= maxRetries) {\n                    throw err;\n                }\n                // Wait before retrying\n                await new Promise(resolve => setTimeout(resolve, 500));\n            }\n        }\n        // Set form values\n        const groupNameInput = document.getElementById('group-name');\n        if (groupNameInput)\n            groupNameInput.value = settings.group;\n        const toggleRatings = document.getElementById('toggle-ratings');\n        if (toggleRatings)\n            toggleRatings.checked = settings.showAlternativeRating;\n        const noRatingStyle = document.getElementById('no-rating-style');\n        if (noRatingStyle)\n            noRatingStyle.value = settings.noGroupRatingStyle;\n        const maxReplacements = document.getElementById('max-replacements');\n        if (maxReplacements)\n            maxReplacements.value = settings.maxReplacementsPerPage.toString();\n        const cacheThreshold = document.getElementById('cache-threshold');\n        if (cacheThreshold)\n            cacheThreshold.value = settings.cacheThresholdMinutes.toString();\n        // Initialize color examples\n        initializeColorExamples();\n        // Initialize no-rating example\n        updateNoRatingExamples(settings.noGroupRatingStyle);\n        // Initialize event listeners\n        initializeEventListeners();\n    }\n    catch (error) {\n        console.error('Error initializing options page:', error);\n        showStatus('Error loading settings', true);\n    }\n});\n// Render Preact component\n(0,preact__WEBPACK_IMPORTED_MODULE_1__.render)((0,preact_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(OptionsPage, {}), document.body);\n\n\n//# sourceURL=webpack://rshf-ext/./src/options/options.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/constants.ts":
+/*!*********************************!*\
+  !*** ./src/shared/constants.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   API: () => (/* binding */ API),\n/* harmony export */   DEFAULT_SETTINGS: () => (/* binding */ DEFAULT_SETTINGS),\n/* harmony export */   DEFAULT_USER: () => (/* binding */ DEFAULT_USER),\n/* harmony export */   NO_GROUP_RATING_COLOR: () => (/* binding */ NO_GROUP_RATING_COLOR),\n/* harmony export */   SELECTORS: () => (/* binding */ SELECTORS),\n/* harmony export */   STORAGE_KEYS: () => (/* binding */ STORAGE_KEYS)\n/* harmony export */ });\n// Shared constants for the extension\n// Default settings\nconst DEFAULT_SETTINGS = {\n    group: '',\n    showAlternativeRating: true,\n    noGroupRatingStyle: 'opacity',\n    maxReplacementsPerPage: 2000,\n    cacheThresholdMinutes: 30\n};\n// Storage keys\nconst STORAGE_KEYS = {\n    SETTINGS: 'settings',\n    CACHE: 'cache',\n    USER: 'user'\n};\n// Default user (until login is implemented)\nconst DEFAULT_USER = 'TestUser';\n// Codeforces DOM selectors\nconst SELECTORS = {\n    RATED_USER: '.rated-user'\n};\n// Special color for users without group ratings\nconst NO_GROUP_RATING_COLOR = '#964B00'; // Brown\n// API endpoints (will be replaced with real endpoints later)\nconst API = {\n    BASE_URL: 'https://api.example.com', // Placeholder\n    GET_RATINGS: '/ratings'\n};\n\n\n//# sourceURL=webpack://rshf-ext/./src/shared/constants.ts?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"options": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkrshf_ext"] = self["webpackChunkrshf_ext"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_webextension-polyfill_dist_browser-polyfill_js","vendors-node_modules_preact_jsx-runtime_dist_jsxRuntime_module_js"], () => (__webpack_require__("./src/options/options.tsx")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
